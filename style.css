@@ -1,0 +1,36 @@
+
+body {
+  background-color: black;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.red {
+  width: 75px;
+  height: 75px;
+  background-color: red;
+  margin-left: 75px;
+}
+
+.blue {
+  background-color: blue;
+  width: 75px;
+  height: 75px;
+  float: right;
+  margin-right: 1021px;
+}
+
+.yellow {
+  background-color: yellow;
+  width: 75px;
+  height: 75px;
+  margin-top: -75px;
+}
+
+.green {
+  background-color: green;
+  width: 75px;
+  height: 75px;
+}
