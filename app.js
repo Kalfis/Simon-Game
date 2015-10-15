@@ -1,4 +1,5 @@
 
+
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
   return cpuArray;
@@ -39,3 +40,12 @@ $('.green').click(function(){
   console.log('green was clicked');
   playerColors.push(4)
 });
+
+function checkMatch(playerColors, cpuColors) {
+  if(playerColors === cpuColors) {
+    return runGame;
+  }
+  else {
+    break;
+  }
+}
