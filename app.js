@@ -41,11 +41,6 @@ $('.green').click(function(){
   playerColors.push(4)
 });
 
-function checkMatch(playerColors, cpuColors) {
-  if(playerColors === cpuColors) {
-    return runGame;
-  }
-  else {
-    break;
-  }
+var match = function(){
+  cpuColors === playerColors
 }
