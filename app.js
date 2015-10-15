@@ -1,10 +1,10 @@
 
 var randomSequence = function() {
-  var cpuColors = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
-  return cpuColors;
+  var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
+  return cpuArray;
 }
 
-var cpuArray = randomSequence();
+var cpuColors = randomSequence();
 
 var redButton = $('<button/>');
 redButton.addClass('red');
