@@ -1,5 +1,5 @@
 
-//var runGame = function() {
+var runGame = function() {
 
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
@@ -56,23 +56,22 @@ $('.green').click(function(){
 //}
 
 //seperate check function from game functions in order to tell check function to run game function again if player wins
+function checkClicks(cpuColors, playerColors) {
+if (cpuColors.length === playerColors.length){
+    checkMatch();
+}
+else {
+    return "lose"
+}
+}
+
 function checkMatch(cpuColors, playerColors){
 
 for(var i = 0; i < cpuColors.length; i++) {
   if(cpuColors[i] !== playerColors[i]) {
     return "lose";
   }
-  else {
-    return "Win";
-  }
 }
-
+return "win";
 }
-
 checkMatch(cpuColors, playerColors);
-  //  return runGame();
-  }
-  /* else {
-    break;
-  } */
-}
