@@ -1,4 +1,5 @@
 
+//var runGame = function() {
 
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
@@ -6,6 +7,17 @@ var randomSequence = function() {
 }
 
 var cpuColors = randomSequence();
+/*
+function animate(cpuColors) {
+  var i = 0;
+  var interval = setInterval(function() {
+    lightUp(cpuColors[i]); i++;
+    if(i >= cpuColors.length) {
+      clearInterval(interval);
+    }
+  }, 600);
+}
+*/
 
 var redButton = $('<button/>');
 redButton.addClass('red');
@@ -41,6 +53,26 @@ $('.green').click(function(){
   playerColors.push(4)
 });
 
-var match = function(){
-  cpuColors === playerColors
+//}
+
+//seperate check function from game functions in order to tell check function to run game function again if player wins
+function checkMatch(cpuColors, playerColors){
+
+for(var i = 0; i < cpuColors.length; i++) {
+  if(cpuColors[i] !== playerColors[i]) {
+    return "lose";
+  }
+  else {
+    return "Win";
+  }
+}
+
+}
+
+checkMatch(cpuColors, playerColors);
+  //  return runGame();
+  }
+  /* else {
+    break;
+  } */
 }
