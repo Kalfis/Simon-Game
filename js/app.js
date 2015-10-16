@@ -53,7 +53,6 @@ $('.green').click(function(){
   playerColors.push(4)
 });
 
-//}
 
 //seperate check function from game functions in order to tell check function to run game function again if player wins
 function checkClicks(cpuColors, playerColors) {
@@ -72,6 +71,8 @@ for(var i = 0; i < cpuColors.length; i++) {
     return "lose";
   }
 }
-return "win";
+return runGame();
 }
 checkMatch(cpuColors, playerColors);
+
+}
