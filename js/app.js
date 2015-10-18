@@ -1,5 +1,5 @@
 
-var runGame = function() {
+//var runGame = function() {
 
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
@@ -7,17 +7,11 @@ var randomSequence = function() {
 }
 
 var cpuColors = randomSequence();
-/*
-function animate(cpuColors) {
-  var i = 0;
-  var interval = setInterval(function() {
-    lightUp(cpuColors[i]); i++;
-    if(i >= cpuColors.length) {
-      clearInterval(interval);
-    }
-  }, 600);
+
+var lightCpuColors = function() {
+  
 }
-*/
+
 
 var redButton = $('<button/>');
 redButton.addClass('red');
@@ -75,4 +69,4 @@ return runGame();
 }
 checkMatch(cpuColors, playerColors);
 
-}
+//}

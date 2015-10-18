@@ -34,3 +34,11 @@ ul{
   width: 75px;
   height: 75px;
 }
+
+.tile {
+  opacity: 0.6;
+}
+
+.tile.lit {
+  opacity: 1;
+}
