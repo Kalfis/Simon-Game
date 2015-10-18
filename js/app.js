@@ -7,9 +7,24 @@ var randomSequence = function() {
 }
 
 var cpuColors = randomSequence();
-
+//how to get the random Array I just made to light up?
 var lightCpuColors = function() {
-  
+  var i = 0;
+  var that = this;
+  var interval = setInterval(function() {
+    that.lightUp(cupColors[i]);
+    i++;
+    if (i >= cupColors.length){
+      clearInterval(interval);
+    }
+  }, 600);
+}
+
+var lightUp = function() {
+  var $tile = $(cpuColors.id).addClass('lit');
+  window.setTimeout(function() {
+    $tile.removeClass('lit');
+  }, 300);
 }
 
 
