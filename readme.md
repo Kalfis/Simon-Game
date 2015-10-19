@@ -1,5 +1,12 @@
 Need to create some sort of run game function here to run the whole thing.
 
+
+
+
+
+
+
+
 Here I added a function to create a random array with the numbers 1 to 4 in order to simulate randomly choosing colors, the colors have a number value associated with them in index.html.
 
 

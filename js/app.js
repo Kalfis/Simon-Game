@@ -1,18 +1,19 @@
-window.onload = function () {
+/* window.onload = function () {
   runGame();
-}
+} */
 
-var cpuColors = [];
-var playerColors = [];
+var cpuColors = new Array();
+var playerColors = new Array();
 
-var runGame = function() {
-
+/* var runGame = function() {
+*/
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
   return cpuArray;
 }
 
-var cpuColors = randomSequence();
+cpuColors = randomSequence();
+console.log(cpuColors);
 //how to get the random Array I just made to light up?
 /*
 var lightCpuColors = function(cpuColors) {
@@ -46,7 +47,7 @@ yellowButton.addClass('yellow');
 var greenButton = $('<button/>');
 greenButton.addClass('green');
 
-var playerColors = new Array();
+//var playerColors = new Array();
 
 $('.red').click(function(){
   console.log('red was clicked');
@@ -70,6 +71,8 @@ $('.green').click(function(){
 
 
 //seperate check function from game functions in order to tell check function to run game function again if player wins
+console.log(cpuColors);
+
 function checkClicks(cpuColors, playerColors) {
 if (cpuColors.length === playerColors.length){
     checkMatch();
@@ -78,7 +81,7 @@ else {
     return "lose"
 }
 }
-
+console.log(cpuColors);
 function checkMatch(cpuColors, playerColors){
 
 for(var i = 0; i < cpuColors.length; i++) {
@@ -86,8 +89,9 @@ for(var i = 0; i < cpuColors.length; i++) {
     return "lose";
   }
 }
-return runGame();
+return 'win'
 }
+console.log(cpuColors);
 checkMatch(cpuColors, playerColors);
 
-}
+//}
