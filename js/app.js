@@ -1,4 +1,3 @@
-
 //var runGame = function() {
 
 var randomSequence = function() {
@@ -8,7 +7,7 @@ var randomSequence = function() {
 
 var cpuColors = randomSequence();
 //how to get the random Array I just made to light up?
-var lightCpuColors = function() {
+var lightCpuColors = function(cpuColors) {
   var i = 0;
   var that = this;
   var interval = setInterval(function() {
@@ -20,13 +19,12 @@ var lightCpuColors = function() {
   }, 600);
 }
 
-var lightUp = function() {
-  var $tile = $(cpuColors.id).addClass('lit');
+var lightUp = function(tile) {
+  var $tile = $('[data-value=' + tile + ']').addClass('lit');
   window.setTimeout(function() {
     $tile.removeClass('lit');
   }, 300);
 }
-
 
 var redButton = $('<button/>');
 redButton.addClass('red');
