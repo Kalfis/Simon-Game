@@ -1,4 +1,11 @@
-//var runGame = function() {
+window.onload = function () {
+  runGame();
+}
+
+var cpuColors = [];
+var playerColors = [];
+
+var runGame = function() {
 
 var randomSequence = function() {
   var cpuArray = [Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1), Math.floor((Math.random()*4)+1)];
@@ -7,6 +14,7 @@ var randomSequence = function() {
 
 var cpuColors = randomSequence();
 //how to get the random Array I just made to light up?
+/*
 var lightCpuColors = function(cpuColors) {
   var i = 0;
   var that = this;
@@ -25,7 +33,7 @@ var lightUp = function(tile) {
     $tile.removeClass('lit');
   }, 300);
 }
-
+*/
 var redButton = $('<button/>');
 redButton.addClass('red');
 
@@ -82,4 +90,4 @@ return runGame();
 }
 checkMatch(cpuColors, playerColors);
 
-//}
+}
